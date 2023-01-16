@@ -9,6 +9,7 @@ namespace day16
         public static string Reg_pattern2 = "^[A-Z]{1}[A-Za-z]{2,}$";
         public static string Reg_pattern3 = "^(abc)(.[A-Za-z]+)*@(bl).(co)([.][a-z]{2,})?$";  
         public static string Reg_pattern4 = "^[0-9]{2}\\s[0-9]{10}$";
+        public static string Reg_pattern5 = "^[a-zA-Z]{8,}([0-9]+)?$";
         public static void Main(String[] args)
         {
             Console.WriteLine("enter your First  name");
@@ -23,6 +24,9 @@ namespace day16
             Console.WriteLine("enter your mobile number");
             string mb = Console.ReadLine();
             Console.WriteLine();
+            Console.WriteLine("enter your password ");
+            string pwd = Console.ReadLine();
+            Console.WriteLine();
 
 
 
@@ -30,7 +34,7 @@ namespace day16
             bool val2 = Regex.IsMatch(lname, Reg_pattern2);
             bool val3 = Regex.IsMatch(mail, Reg_pattern3);
             bool val4 = Regex.IsMatch(mb, Reg_pattern4);
-
+            bool val5 = Regex.IsMatch(pwd, Reg_pattern5);
 
             if (val1)
             {
@@ -56,6 +60,12 @@ namespace day16
             }
             else
                 Console.WriteLine("pattern mobile number  is wrong");
+            if (val5)
+            {
+                Console.WriteLine("Pattern is correct for given password : {0}", pwd);
+            }
+            else
+                Console.WriteLine("pattern password  is wrong");
 
         }
     }
