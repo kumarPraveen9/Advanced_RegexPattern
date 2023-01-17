@@ -10,7 +10,7 @@ namespace RegexTestCase
         [TestMethod]
         public void UseCase1()
         {            
-            string name = "Krishna";
+            string name = "Shankerma";
             bool expected = true; 
             Program program=new Program();
             bool actual = program.val(name);
@@ -20,7 +20,7 @@ namespace RegexTestCase
         [TestMethod]
         public void UseCase2()
         {
-            string lastname = "Radha";
+            string lastname = "ShivajiMa";
             bool expected = true;
             Program program=new Program();
             bool actual = program.val(lastname);
@@ -40,7 +40,7 @@ namespace RegexTestCase
         [TestMethod]
         public void UseCase4()
         {
-            string mb = "91 7985369532";
+            string mb = "91 7330827008";
             bool expected = true;
             Program program=new Program();
             bool actual = program.val(mb);
@@ -49,7 +49,7 @@ namespace RegexTestCase
         [TestMethod]
         public void UseCase5()
         {
-            string password = "krishnap";
+            string password = "Ooliisaap";
             bool expected = true;
             Program program=new Program();
             bool actual = program.val(password);
@@ -59,7 +59,7 @@ namespace RegexTestCase
         [TestMethod]
         public void UseCase6()
         {
-            string password = "Krishnap";
+            string password = "Praveenn";
             bool expected = true;
             Program program=new Program();
             bool actual = program.val(password);
@@ -69,7 +69,7 @@ namespace RegexTestCase
         [TestMethod]
         public void UseCase7()
         {
-            string password = "Dhanas8w";
+            string password = "Praveen9";
             bool expected = true;
             Program program=new Program();
             bool actual = program.val(password);
@@ -79,7 +79,7 @@ namespace RegexTestCase
         [TestMethod]
         public void UseCase8()
         {
-            string password = "Kifnj@78a";
+            string password = "Pravee$9";
             bool expected = true;
             Program program=new Program();
             bool actual = program.val(password);
