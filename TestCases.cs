@@ -31,11 +31,16 @@ namespace RegexTestCase
         [TestMethod]
         public void UseCase3()
         {
-            string email = "abc.xyz@bl.co.in";
-            bool expected = true;
-            demo program = new demo();
-            bool actual = program.validmail(email);
-            Assert.AreEqual(expected, actual);
+            string[] emails = new string[3] { "abc.xyz@bl.co.in", "a123@bl.co.in", "fhjjm33@bl.co" };
+           
+            for (int i = 0; i < 3; i++)
+            {
+               
+                bool expected = true;
+                demo program = new demo();
+                bool actual = program.validmail(emails[i]);
+                Assert.AreEqual(expected, actual);
+            }
         }
 
         [TestMethod]
