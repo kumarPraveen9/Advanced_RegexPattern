@@ -43,6 +43,9 @@ namespace day16
         public static string Reg_pattern4 = "^[0-9]{2}\\s[0-9]{10}$";
 
         public static string Reg_pattern5 = "^.*(?=.{8,})(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=]).*$";
+        public static string Reg_pattern5_1 = "^[a-zA-Z]{8,}([0-9]+)?$";
+        public static string Reg_pattern5_2 = "^[A-Z]{1,}[a-zA-Z]{7,}([0-9]+)?$";
+        public static string Reg_pattern5_3 = "^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}([0-9]+)?$";
         public bool validname(string name)
             {
                 bool val1 = Regex.IsMatch(name, Reg_pattern1);
@@ -107,9 +110,23 @@ namespace day16
                 }
             
         }
-        public bool validpwd(string pwd)
+        public bool validpwd1(string pwd)
+        {
+            bool val5 = Regex.IsMatch(pwd, Reg_pattern5_1);
+            if (val5)
             {
-                bool val5 = Regex.IsMatch(pwd, Reg_pattern5);
+                Console.WriteLine("Pattern is correct for given password : {0}", pwd);
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("pattern password  is wrong");
+                return false;
+            }
+        }
+        public bool validpwd2(string pwd)
+            {
+                bool val5 = Regex.IsMatch(pwd, Reg_pattern5_2);
                 if (val5)
                 {
                     Console.WriteLine("Pattern is correct for given password : {0}", pwd);
@@ -121,7 +138,35 @@ namespace day16
                     return false;
                 }
             }
+        public bool validpwd3(string pwd)
+        {
+            bool val5 = Regex.IsMatch(pwd, Reg_pattern5_3);
+            if (val5)
+            {
+                Console.WriteLine("Pattern is correct for given password : {0}", pwd);
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("pattern password  is wrong");
+                return false;
+            }
         }
+        public bool validpwd(string pwd)
+        {
+            bool val5 = Regex.IsMatch(pwd, Reg_pattern5);
+            if (val5)
+            {
+                Console.WriteLine("Pattern is correct for given password : {0}", pwd);
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("pattern password  is wrong");
+                return false;
+            }
+        }
+    }
     
 }
 
