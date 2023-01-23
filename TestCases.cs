@@ -2,6 +2,9 @@ using day16;
 using System.Security.Cryptography.X509Certificates;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.TestPlatform.TestHost;
+using System.Collections.Generic;
+using System.Xml.Linq;
+using System;
 
 namespace RegexTestCase
 {
@@ -24,9 +27,10 @@ namespace RegexTestCase
             try
             {
                 string name = "Shankerma";
-                bool expected = true;
+                string expected = "First Name is valid";
                 demo program = new demo();
-                bool actual = program.validname(name);
+                string actual = program.validname(name);
+               
                 Assert.AreEqual(expected, actual);
             }
             catch (InvalidException ex)
@@ -41,9 +45,9 @@ namespace RegexTestCase
             try
             {
                 string lastname = "ShivajiMa";
-                bool expected = true;
+                string expected = "last Name is valid";
                 demo program = new demo();
-                bool actual = program.validlname(lastname);
+                string actual = program.validlname(lastname);
                 Assert.AreEqual(expected, actual);
             }
             catch (InvalidException ex)
@@ -62,9 +66,9 @@ namespace RegexTestCase
                 for (int i = 0; i < 3; i++)
                 {
 
-                    bool expected = true;
+                    string expected = "mail is valid";
                     demo program = new demo();
-                    bool actual = program.validmail(emails[i]);
+                    string actual = program.validmail(emails[i]);
                     Assert.AreEqual(expected, actual);
                 }
             }
@@ -81,9 +85,9 @@ namespace RegexTestCase
             try
             {
                 string mb = "91 7330827008";
-                bool expected = true;
+                string expected = "mobile is valid";
                 demo program = new demo();
-                bool actual = program.validmobile(mb);
+                string actual = program.validmobile(mb);
                 Assert.AreEqual(expected, actual);
             }
             catch (InvalidException ex)
@@ -97,9 +101,9 @@ namespace RegexTestCase
             try
             {
                 string password = "Ooliisaap";
-                bool expected = true;
+                string expected = "password is valid";
                 demo program = new demo();
-                bool actual = program.validpwd1(password);
+                string actual = program.validpwd1(password);
                 Assert.AreEqual(expected, actual);
             }
             catch (InvalidException ex)
@@ -115,9 +119,9 @@ namespace RegexTestCase
             try
             {
                 string password = "Praveenn";
-                bool expected = true;
+                string expected = "password is valid";
                 demo program = new demo();
-                bool actual = program.validpwd2(password);
+                string actual = program.validpwd2(password);
                 Assert.AreEqual(expected, actual);
             }
             catch (InvalidException ex)
@@ -132,9 +136,9 @@ namespace RegexTestCase
             try
             {
                 string password = "Praveen9";
-                bool expected = true;
+                string expected = "password is valid";
                 demo program = new demo();
-                bool actual = program.validpwd3(password);
+                string actual = program.validpwd3(password);
                 Assert.AreEqual(expected, actual);
             }
             catch (InvalidException ex)
@@ -149,9 +153,9 @@ namespace RegexTestCase
             try
             {
                 string password = "Pravee$9";
-                bool expected = true;
+                string expected = "password is valid";
                 demo program = new demo();
-                bool actual = program.validpwd(password);
+                string actual = program.validpwd(password);
                 Assert.AreEqual(expected, actual);
             }
             catch (InvalidException ex)
@@ -166,9 +170,9 @@ namespace RegexTestCase
             try
             {
                 string email1 = "abc.xyz@gmail.com";
-                bool expected = true;
+                string expected = "mail is valid";
                 demo program = new demo();
-                bool actual = program.validmail(email1);
+                string actual = program.validmail(email1);
                 Assert.AreEqual(expected, actual);
             }
             catch (InvalidException ex)
