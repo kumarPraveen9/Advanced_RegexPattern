@@ -1,6 +1,7 @@
-using Day19RejexAssignment;
+using day16;
 using System.Security.Cryptography.X509Certificates;
 using System.Diagnostics.CodeAnalysis;
+using Microsoft.VisualStudio.TestPlatform.TestHost;
 
 namespace RegexTestCase
 {
@@ -9,11 +10,11 @@ namespace RegexTestCase
     {
         [TestMethod]
         public void UseCase1()
-        {            
+        {
             string name = "Shankerma";
-            bool expected = true; 
-            Program program=new Program();
-            bool actual = program.val(name);
+            bool expected = true;
+            demo program = new demo();
+            bool actual = program.validname(name);
             Assert.AreEqual(expected, actual);
         }
 
@@ -22,8 +23,8 @@ namespace RegexTestCase
         {
             string lastname = "ShivajiMa";
             bool expected = true;
-            Program program=new Program();
-            bool actual = program.val(lastname);
+            demo program = new demo();
+            bool actual = program.validlname(lastname);
             Assert.AreEqual(expected, actual);
         }
 
@@ -32,8 +33,8 @@ namespace RegexTestCase
         {
             string email = "abc.xyz@bl.co.in";
             bool expected = true;
-            Program program=new Program();
-            bool actual = program.val(email);
+            demo program = new demo();
+            bool actual = program.validmail(email);
             Assert.AreEqual(expected, actual);
         }
 
@@ -42,8 +43,8 @@ namespace RegexTestCase
         {
             string mb = "91 7330827008";
             bool expected = true;
-            Program program=new Program();
-            bool actual = program.val(mb);
+            demo program = new demo();
+            bool actual = program.validmobile(mb);
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
@@ -51,8 +52,8 @@ namespace RegexTestCase
         {
             string password = "Ooliisaap";
             bool expected = true;
-            Program program=new Program();
-            bool actual = program.val(password);
+            demo program = new demo();
+            bool actual = program.validpwd(password);
             Assert.AreEqual(expected, actual);
         }
 
@@ -61,8 +62,8 @@ namespace RegexTestCase
         {
             string password = "Praveenn";
             bool expected = true;
-            Program program=new Program();
-            bool actual = program.val(password);
+            demo program = new demo();
+            bool actual = program.validpwd(password);
             Assert.AreEqual(expected, actual);
         }
 
@@ -71,8 +72,8 @@ namespace RegexTestCase
         {
             string password = "Praveen9";
             bool expected = true;
-            Program program=new Program();
-            bool actual = program.val(password);
+            demo program = new demo();
+            bool actual = program.validpwd(password);
             Assert.AreEqual(expected, actual);
         }
 
@@ -81,8 +82,8 @@ namespace RegexTestCase
         {
             string password = "Pravee$9";
             bool expected = true;
-            Program program=new Program();
-            bool actual = program.val(password);
+            demo program = new demo();
+            bool actual = program.validpwd(password);
             Assert.AreEqual(expected, actual);
         }
 
@@ -91,8 +92,8 @@ namespace RegexTestCase
         {
             string email1 = "abc.xyz@gmail.com";
             bool expected = true;
-            Program program=new Program();
-            bool actual = program.val(email1);
+            demo program = new demo();
+            bool actual = program.validmail(email1);
             Assert.AreEqual(expected, actual);
         }
     }
