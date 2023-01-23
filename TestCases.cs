@@ -53,7 +53,7 @@ namespace RegexTestCase
             string password = "Ooliisaap";
             bool expected = true;
             demo program = new demo();
-            bool actual = program.validpwd(password);
+            bool actual = program.validpwd1(password);
             Assert.AreEqual(expected, actual);
         }
 
@@ -63,7 +63,7 @@ namespace RegexTestCase
             string password = "Praveenn";
             bool expected = true;
             demo program = new demo();
-            bool actual = program.validpwd(password);
+            bool actual = program.validpwd2(password);
             Assert.AreEqual(expected, actual);
         }
 
@@ -73,7 +73,7 @@ namespace RegexTestCase
             string password = "Praveen9";
             bool expected = true;
             demo program = new demo();
-            bool actual = program.validpwd(password);
+            bool actual = program.validpwd3(password);
             Assert.AreEqual(expected, actual);
         }
 
